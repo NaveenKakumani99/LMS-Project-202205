@@ -5,7 +5,7 @@ pipeline {
 
     environment {
 
-    DOCKERHUB_CREDENTIALS = credentials('Naveen1016')
+    DOCKERHUB_CREDENTIALS = credentials('naveen1016')
      registry = "Naveen1016/backend-lms"
         registryCredential = 'dockerusermubeen'
         dockerImage = ''
@@ -16,7 +16,7 @@ pipeline {
         
         stage('Building the docker image') {
             steps {
-                sh 'cd api && docker build -t Naveen1016/backend-lms .'
+                sh 'cd api && docker build -t naveen1016/backend-lms .'
             }
         }
         stage('Logging into dockerhub account') {
@@ -26,12 +26,12 @@ pipeline {
         }
         stage('pushing the docker image into dockerhub') {
             steps {
-                  sh 'docker push Naveen1016/backend-lms'
+                  sh 'docker push naveen1016/backend-lms'
             }
         }
         stage('Remove old docker images') {
              steps {
-                 sh 'docker rmi -f Naveen1016/backend-lms'
+                 sh 'docker rmi -f naveen1016/backend-lms'
             }
         }
          stage('creating database container') {
