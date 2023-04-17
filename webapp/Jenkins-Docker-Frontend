@@ -2,7 +2,7 @@ Jenkinsfile for frontend
 
 pipeline {
     agent {
-      label 'docker'
+      label 'Docker'
     }
 
     environment {
