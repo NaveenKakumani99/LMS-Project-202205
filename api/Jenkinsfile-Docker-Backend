@@ -5,7 +5,7 @@ pipeline {
 
     environment {
 
-    DOCKERHUB_CREDENTIALS = credentials('DockerHub Credentials')
+    DOCKERHUB_CREDENTIALS = credentials('dockeruser')
      registry = "naveen1016/backend-lms"
         registryCredential = 'dockerusermubeen'
         dockerImage = ''
