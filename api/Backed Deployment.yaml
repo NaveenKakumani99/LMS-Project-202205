@@ -14,7 +14,7 @@ spec:
     spec:
      containers:
         - name: api
-          image: naveen1016/backend
+          image: naveen1016/k8s-backend
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
